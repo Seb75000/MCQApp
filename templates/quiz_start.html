@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+    <label for="user_id">Your Name / ID:</label>
+    <input type="text" name="user_id" id="user_id" required>
+    
+    <fieldset>
+        <legend>Select Themes (optional)</legend>
+        {% for theme in all_themes %}
+            <input type="checkbox" name="themes" value="{{ theme }}" id="theme_{{ loop.index }}" checked>
+            <label for="theme_{{ loop.index }}">{{ theme }}</label><br>
+        {% endfor %}
+    </fieldset>
+    
+    <button type="submit">Start Quiz</button>
+    
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+</form>
+
+{% endblock %}

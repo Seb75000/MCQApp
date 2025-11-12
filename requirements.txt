@@ -1,0 +1,5 @@
+Flask
+PyYAML
+matplotlib
+numpy
+reportlab

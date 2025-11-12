@@ -1,0 +1,215 @@
+- id: 1
+  question: "Which command is used to list all files, including hidden ones, in Linux ?"
+  options:
+    - "ls -a"
+    - "dir"
+    - "list /all"
+    - "show hidden"
+  correct_answers:
+    - "ls -a"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 2
+  question: "In Windows, which tool can be used to check active network connections?"
+  options:
+    - "Task Manager"
+    - "netstat"
+    - "ipconfig /all"
+    - "Event Viewer"
+  correct_answers:
+    - "netstat"
+  themes:
+    - "Windows"
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 3
+  question: "Which protocol is primarily used to securely transfer files over the Internet ?"
+  options:
+    - "FTP"
+    - "HTTP"
+    - "SFTP"
+    - "SMTP"
+  correct_answers:
+    - "SFTP"
+  themes:
+    - "Network"
+  difficulty: 3
+  image: null
+
+- id: 4
+  question: "What is the primary goal of digital forensics?"
+  options:
+    - "To identify security vulnerabilities"
+    - "To investigate and preserve evidence of cybercrime"
+    - "To configure firewalls"
+    - "To monitor network traffic in real-time"
+  correct_answers:
+    - "To investigate and preserve evidence of cybercrime"
+  themes:
+    - "Forensics"
+  difficulty: 2
+  image: null
+
+- id: 5
+  question: "Which action is part of an incident response plan?"
+  options:
+    - "Performing malware analysis"
+    - "Writing a blog post"
+    - "Upgrading hardware"
+    - "Changing office passwords without context"
+  correct_answers:
+    - "Performing malware analysis"
+  themes:
+    - "Incident Response"
+  difficulty: 3
+  image: null
+
+- id: 6
+  question: "In Cyber Threat Intelligence (CTI), what does 'TTP' stand for?"
+  options:
+    - "Threats, Tactics, Procedures"
+    - "Tactics, Techniques, Procedures"
+    - "Technology, Threats, Policies"
+    - "Tools, Threats, Practices"
+  correct_answers:
+    - "Tactics, Techniques, Procedures"
+  themes:
+    - "CTI"
+  difficulty: 3
+  image: null
+
+- id: 7
+  question: "Which Linux command shows real-time memory usage?"
+  options:
+    - "top"
+    - "meminfo"
+    - "df -h"
+    - "uptime"
+  correct_answers:
+    - "top"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 8
+  question: "Which Windows feature allows auditing of file access events?"
+  options:
+    - "Event Viewer"
+    - "Audit Policy"
+    - "Task Scheduler"
+    - "Windows Defender"
+  correct_answers:
+    - "Audit Policy"
+  themes:
+    - "Windows"
+    - "Forensics"
+  difficulty: 3
+  image: null
+
+- id: 9
+  question: "Which Linux command can be used to check which process is listening on a specific port?"
+  options:
+    - "netstat -tuln"
+    - "ps aux"
+    - "ls -l /proc"
+    - "top"
+  correct_answers:
+    - "netstat -tuln"
+  themes:
+    - "Linux"
+    - "Network"
+  difficulty: 3
+  image: null
+
+- id: 10
+  question: "During an incident response, what is the first step you should take when a system is suspected to be compromised?"
+  options:
+    - "Disconnect the system from the network"
+    - "Run antivirus scan immediately"
+    - "Reboot the system"
+    - "Notify the press"
+  correct_answers:
+    - "Disconnect the system from the network"
+  themes:
+    - "Incident Response"
+  difficulty: 3
+  image: null
+
+- id: 11
+  question: "Which Windows command shows detailed TCP/IP configuration for all interfaces?"
+  options:
+    - "ipconfig /all"
+    - "netstat -an"
+    - "ping localhost"
+    - "tracert google.com"
+  correct_answers:
+    - "ipconfig /all"
+  themes:
+    - "Windows"
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 12
+  question: "In forensics, which type of image preserves all data including deleted files and slack space?"
+  options:
+    - "Logical image"
+    - "Physical image"
+    - "Incremental backup"
+    - "Differential backup"
+  correct_answers:
+    - "Physical image"
+  themes:
+    - "Forensics"
+  difficulty: 3
+  image: null
+
+- id: 13
+  question: "Which tool is commonly used for malware analysis in a sandbox environment?"
+  options:
+    - "Wireshark"
+    - "Cuckoo Sandbox"
+    - "Nmap"
+    - "Metasploit"
+  correct_answers:
+    - "Cuckoo Sandbox"
+  themes:
+    - "Incident Response"
+    - "Forensics"
+  difficulty: 3
+  image: null
+
+- id: 14
+  question: "Which Linux command can show network traffic in real-time?"
+  options:
+    - "tcpdump"
+    - "grep"
+    - "chmod"
+    - "df -h"
+  correct_answers:
+    - "tcpdump"
+  themes:
+    - "Linux"
+    - "Network"
+  difficulty: 3
+  image: null
+
+- id: 15
+  question: "What is the capital of France?"
+  options:
+    - "Berlin"
+    - "Madrid"
+    - "Paris"
+    - "Rome"
+  correct_answers:
+    - "Paris"
+  themes:
+    - "General Knowledge"
+  difficulty: 1
+  image: null

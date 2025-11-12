@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Quiz Report</h2>
+<p><strong>User ID:</strong> {{ report.user_id }}</p>
+<p><strong>Start time:</strong> {{ report.start_time }}</p>
+<p><strong>End time:</strong> {{ report.end_time }}</p>
+
+<a href="{{ url_for('quiz_report_download') }}" class="btn btn-success mt-3">Download PDF report</a>
+
+<h3>Scores by Theme</h3>
+<ul class="list-group">
+{% for theme, pct in percentages.items() %}
+<li class="list-group-item">
+  {{ theme }}: {{ pct|round(1) }}% 
+  ({{ theme_scores[theme].obtained|round(1) }}/{{ theme_scores[theme].max|round(1) }})
+</li>
+{% endfor %}
+</ul>
+
+<h3 class="mt-4">Performance Chart</h3>
+<img src="data:image/png;base64,{{ chart_base64 }}" class="img-fluid" alt="Radar Chart">
+
+<h3 class="mt-4">Questions</h3>
+
+<!-- 🔸 Légende colorée -->
+<div class="mb-3">
+  <span style="color: green; font-weight: bold;">&#9679; Correct</span> &nbsp;&nbsp;
+  <span style="color: orange; font-weight: bold;">&#9679; Partial</span> &nbsp;&nbsp;
+  <span style="color: red; font-weight: bold;">&#9679; Wrong</span>
+</div>
+
+<ul class="list-group">
+{% for q in report.questions %}
+  {% if q.status == 'correct' %}
+    {% set color = 'green' %}
+  {% elif q.status == 'partial' %}
+    {% set color = 'orange' %}
+  {% else %}
+    {% set color = 'red' %}
+  {% endif %}
+
+<li class="list-group-item" style="border-left: 6px solid {{ color }};">
+    <p style="color: {{ color }};"><strong>Q{{ loop.index }}:</strong> {{ q.question }}</p>
+    <p style="margin: 0; color: {{ color }};">Your answer: {{ q.user_answer|join(", ") if q.user_answer else "No answer" }}</p>
+    <p style="margin: 0; color: {{ color }};">Correct answer(s): {{ q.correct_answers|join(", ") }}</p>
+    <p style="margin: 0; color: {{ color }};">
+      {% if q.explanations %}
+        <em>Explanation: {{ q.explanations }}</em>
+      {% endif %}
+    </p>
+    <p style="margin: 0; color: {{ color }};">Themes: {{ q.themes|join(", ") }}</p>
+    <p style="margin: 0; color: {{ color }};">Difficulty: {{ q.difficulty }}</p>
+</li>
+{% endfor %}
+</ul>
+
+<a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Back to Home</a>
+{% endblock %}
+
+<a href="{{ url_for('quiz_report_download') }}" class="btn btn-success mt-3">Download PDF</a>
