@@ -1,0 +1,216 @@
+# System. Linux, Windows
+
+- id: 1
+  question: "Which command enable to list current running processes in Linux?"
+  options:
+    - "ps aux"
+    - "ls -l"
+    - "top"
+    - "df -h"
+  correct_answers:
+    - "ps aux"
+    - "top"
+  themes:
+    - "Linux"
+  difficulty: 1
+  image: null
+
+- id: 2
+  question: "Which file in Linux contains users' hashed passwords?"
+  options:
+    - "/etc/passwd"
+    - "/etc/shadow"
+    - "/etc/group"
+    - "/etc/security"
+  correct_answers:
+    - "/etc/shadow"
+  themes:
+    - "Linux"
+  difficulty: 1
+  image: null
+
+- id: 3
+  question: "Which command is used to list all files, including hidden ones, in Linux ?"
+  options:
+    - "ls -a"
+    - "dir"
+    - "list /all"
+    - "show hidden"
+  correct_answers:
+    - "ls -a"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 4
+  question: "Which Linux command shows real-time memory usage?"
+  options:
+    - "top"
+    - "meminfo"
+    - "df -h"
+    - "uptime"
+  correct_answers:
+    - "top"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 5
+  question: "Which Linux command can be used to check which process is listening on a specific port?"
+  options:
+    - "netstat -tuln"
+    - "ps aux"
+    - "ls -l /proc"
+    - "top"
+  correct_answers:
+    - "netstat -tuln"
+  themes:
+    - "Linux"
+    - "Network"
+  difficulty: 3
+  image: null
+
+- id: 6
+  question: "Which Linux command can show network traffic in real-time?"
+  options:
+    - "tcpdump"
+    - "grep"
+    - "chmod"
+    - "df -h"
+  correct_answers:
+    - "tcpdump"
+  themes:
+    - "Linux"
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 7
+  question: "You can't run a x64 ELF binary on a x86 Linux system because:"
+  options:
+    - "The kernel does not support it"
+    - "The CPU architecture is incompatible"
+    - "The file permissions are incorrect"
+    - "The binary is corrupted"
+  correct_answers:
+    - "The CPU architecture is incompatible"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 8
+  question: "You can set severall IP addresses on a single network interface in Linux using:"
+  options:
+    - "ifconfig"
+    - "ip addr add"
+    - "netstat"
+    - "You can't"
+  correct_answers:
+    - "ip addr add"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 9
+  question: "Which tool is probably illegitimate on a production web server"
+  options:
+    - "Netcat"
+    - "Nginx"
+    - "MySQL"
+    - "Apache"
+  correct_answers:
+    - "Netcat"
+  themes:
+    - "Linux"    
+  difficulty: 2
+  image: null
+
+- id: 10
+  question: "Which Linux command can be used to change file permissions?"
+  options:
+    - "chmod"
+    - "chown"
+    - "lsattr"
+    - "chperm"
+  correct_answers:
+    - "chmod"
+  themes:
+    - "Linux"
+  difficulty: 1
+  image: null
+
+- id: 11
+  question: "A malicious actor wants to maintain access to a compromised Linux system even after a reboot. Which of the following methods would be most effective for achieving this?"
+  options:
+    - "Creating a cron job that executes a reverse shell script at startup"
+    - "Modifying the /etc/hosts file to redirect traffic"
+    - "Changing file permissions on system binaries"
+    - "Using a rootkit to hide processes"
+  correct_answers:
+    - "Creating a cron job that executes a reverse shell script at startup"
+  themes:
+    - "Linux"
+  difficulty: 3
+  image: null
+
+- id: 12
+  question: "You can timestomp files in Linux using the command:"
+  options:
+    - "touch"
+    - "timestomp"
+    - "chmod"
+    - "chattr"
+  correct_answers:
+    - "touch"
+  themes:
+    - "Linux"
+  difficulty: 3
+  image: null
+
+- id: 13
+  question: "Which of the following commands found in .bash_history file can indicate potential malicious activity on a Linux system?"
+  options:
+    - "nc -lvp 4444 -e /bin/bash"
+    - "cat /etc/passwd"
+    - "cd /var/log"
+    - "find / -perm -u=s -type f"
+  correct_answers:
+    - "nc -lvp 4444 -e /bin/bash"
+    - "find / -perm -u=s -type f"
+  themes:
+    - "Linux"
+  difficulty: 3
+  image: null
+
+- id: 14
+  question: "You have the following permissions on a Linux file: -rwsr-xr-x. What does the 's' in the user permissions indicate?"
+  options:
+    - "The file is a symbolic link"
+    - "The file has the setuid bit set"
+    - "The file is a socket"
+    - "The file is a shared library"
+  correct_answers:
+    - "The file has the setuid bit set"
+  themes:
+    - "Linux"
+  difficulty: 3
+  image: null
+
+- id: 15
+  question: "In a Linux system, you find an executable named 'ls' in /root directory. What is the most likely reason for its presence there?"
+  options:
+    - "It's a backup of the original ls command"
+    - "It's a custom version of ls for root user"
+    - "It's a malicious file placed there to exploit PATH variable"
+    - "It's a symbolic link to the original ls command"
+  correct_answers:
+    - "It's a malicious file placed there to exploit PATH variable"
+  themes:
+    - "Linux"
+  difficulty: 3
+  image: null
+

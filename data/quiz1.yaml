@@ -1,0 +1,287 @@
+# Network quiz questions
+
+- id: 1
+  question: "Which one is a valid IP address for a host "
+  options:
+    - "192.168.1.1/24"
+    - "192.168.1.256"
+    - "10.0.0.999"
+    - "192.168.1.0/23"
+  correct_answers:
+    - "192.168.1.1/24"
+    - "192.168.1.0/23"
+    
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 2
+  question: "What protocol is used to securely transfer files over the internet?"
+  options:
+    - "FTP"
+    - "HTTPS"
+    - "SFTP"
+    - "SMTP"
+  correct_answers:
+    - "SFTP"
+    - "HTTPS"
+  themes:
+    - "Network"
+  difficulty: 1
+  image: null
+
+- id: 3
+  question: "Which device is able to connect multiple logical networks together?"
+  options:
+    - "L3 Switch"
+    - "Router"
+    - "Firewall"
+    - "Hub"
+  correct_answers:
+    - "L3 Switch"
+    - "Router"
+    - "Firewall"
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 4
+  question: "What is the main purpose of a VLAN?"
+  options:
+    - "To segment network traffic"
+    - "To increase network speed"
+    - "To provide wireless access"
+    - "To connect different networks"
+  correct_answers:
+    - "To segment network traffic"
+  themes:
+    - "Network"
+  difficulty: 1
+  image: null 
+
+- id: 5
+  question: "Which protocol is used to assign IP addresses dynamically?"
+  options:
+    - "DNS"
+    - "DHCP"
+    - "ARP"
+    - "ICMP"
+  correct_answers:
+    - "DHCP"
+  themes:
+    - "Network"
+  difficulty: 1
+  image: null
+
+- id: 6
+  question: "Kerberoasting attacks permits an attacker to:"
+  options:
+    - "Exploit vulnerabilities in the Kerberos protocol"
+    - "Extract service account credentials from Kerberos tickets"
+    - "Intercept Kerberos authentication traffic"
+    - "Perform denial-of-service attacks on Kerberos servers"
+  correct_answers:
+    - "Extract service account credentials from Kerberos tickets"
+  themes:
+    - "Network"
+    - "Security"
+  difficulty: 3
+  image: null
+
+- id: 7
+  question: "XSS attacks can be mitigated by:"
+  options: 
+    - "Using prepared statements for database queries"
+    - "Implementing Content Security Policy (CSP) headers"
+    - "Validating and sanitizing user input"
+    - "Encrypting sensitive data in transit"
+  correct_answers:
+    - "Implementing Content Security Policy (CSP) headers"
+    - "Validating and sanitizing user input"
+  themes:
+    - "Network"
+    - "Security"
+  difficulty: 3
+  image: null
+
+- id: 8
+  question: "ASRoasting enables an attacker to:"
+  options:
+    - "Exploit vulnerabilities in the AS-REQ process"
+    - "Extract user credentials from AS-REQ Kerberos tickets"
+    - "Intercept AS-REQ authentication traffic"
+    - "Perform denial-of-service attacks on AS servers"
+  correct_answers:
+    - "Extract user credentials from AS-REQ Kerberos tickets"
+  themes:
+    - "Network"
+    - "Security"
+  difficulty: 3
+  image: null
+
+- id: 9
+  question: "Which protocol isn't used in (on premises) Active Directory ?"
+  options:
+    - "LDAP"
+    - "SMB"
+    - "HTTP"
+    - "SSH"
+  correct_answers:
+    - "SSH"
+    - "HTTP"
+  themes:
+    - "Network"
+    - "Security"
+  difficulty: 3
+  image: null
+
+- id: 10
+  question: "How to detect a DNS Tunneling attack?"
+  options:
+    - "Monitor for unusually high DNS query volumes"
+    - "Look for DNS queries with long or random-looking subdomains"
+    - "Check for DNS queries to known malicious domains"
+    - "Analyze DNS traffic for non-standard port usage"
+  correct_answers:
+    - "Monitor for unusually high DNS query volumes"
+    - "Look for DNS queries with long or random-looking subdomains"
+    - "Analyze DNS traffic for non-standard port usage"
+  themes:
+    - "Network"
+  difficulty: 3
+  image: null
+
+- id: 11
+  question: "Which tool can be used to analyze network traffic in real-time?"
+  options:
+    - "Wireshark"
+    - "Nmap"
+    - "tcpdump"
+    - "Netcat"
+  correct_answers:
+    - "Wireshark"
+    - "tcpdump"
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 12
+  question: "What is the purpose of a DMZ in network architecture?"
+  options:
+    - "To isolate internal networks from external threats"
+    - "To provide a secure area for public-facing services"
+    - "To enhance network performance"
+    - "To store sensitive data"
+  correct_answers:
+    - "To isolate internal networks from external threats"
+    - "To provide a secure area for public-facing services"
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 13
+  question: "How to prevent a rogue device from connecting to a wired network?"
+  options:
+    - "Implement MAC address filtering"
+    - "Use 802.1X authentication"
+    - "Disable unused network ports"
+    - "Disable DHCP snooping"
+  correct_answers:
+    - "Implement MAC address filtering"
+    - "Use 802.1X authentication"
+    - "Disable unused network ports"
+  themes:
+    - "Network"
+  difficulty: 3
+  image: null
+
+- id: 14
+  question: "SNMP logging can be used to:"
+  options:
+    - "Monitor network devices for performance and faults"
+    - "Configure network devices remotely"
+    - "Encrypt network traffic"
+    - "Authenticate users on the network"
+  correct_answers:
+    - "Monitor network devices for performance and faults"
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 15
+  question: "Changing mac address of a network interface is called:"
+  options:
+    - "IP Spoofing"
+    - "MAC Spoofing"
+    - "ARP Poisoning"
+    - "DNS Spoofing"
+  correct_answers:
+    - "MAC Spoofing"
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 16
+  question: "ARP poisoning allows an attacker to:"
+  options:
+    - "Intercept network traffic between two devices"
+    - "Perform denial-of-service attacks on a network"
+    - "Gain unauthorized access to a network"
+    - "Spoof IP addresses on a network"
+  correct_answers:
+    - "Intercept network traffic between two devices"
+    - "Perform denial-of-service attacks on a network"
+  themes:
+    - "Network"
+    
+  difficulty: 3    
+  image: null
+
+- id: 17
+  question: "In access.log, you can find"
+  options:
+    - "The client's HTTP GET parameters"
+    - "The client's HTTP POST parameters"
+    - "The server's CPU usage"
+    - "The timestamp of the request"
+  correct_answers:
+    - "The client's HTTP GET parameters"
+    - "The timestamp of the request"
+  themes:
+    - "Network"
+  difficulty: 3
+  image: null
+
+- id: 18
+  question: "in HTTP, which status code indicates that the requested resource has been permanently moved to a new URL?"
+  options:
+    - "301"
+    - "302"
+    - "404"
+    - "500"
+  correct_answers:
+    - "301"
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null
+
+- id: 19
+  question: "SSL/TLS prevents eavesdropping and makes the following impossible :"
+  options:
+    - "Obtain the IP address of the server"
+    - "Intercept and read the data being transmitted"
+    - "Verify the identity of the server"
+    - "Establish a secure connection"
+  correct_answers:
+    - "Intercept and read the data being transmitted"
+  themes:
+    - "Network"
+  difficulty: 2
+  image: null

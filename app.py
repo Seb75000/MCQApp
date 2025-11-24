@@ -15,6 +15,7 @@ from reportlab.lib.utils import ImageReader
 app = Flask(__name__)
 app.secret_key = "sikretKey"
 QUESTIONS_FILE = os.path.join("data", "questions.yaml")
+DATA_DIR = "data"
 QUIZ_DATA = {}
 
 # -------------------------
@@ -23,6 +24,34 @@ QUIZ_DATA = {}
 def load_questions():
     with open(QUESTIONS_FILE, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+# -------------------------
+# List available quizzes
+# -------------------------
+
+def list_quizzes():
+    quizzes = []
+    for fname in os.listdir(DATA_DIR):
+        if fname.endswith(".yaml"):
+            quizname = fname[:-5]  # retire .yaml
+            quizzes.append(quizname)
+    return sorted(quizzes)
+
+# -------------------------
+# Load questions for a specific quiz
+# -------------------------
+
+def load_questions(quizname):
+    filepath = os.path.join(DATA_DIR, f"{quizname}.yaml")
+    with open(filepath, "r", encoding="utf-8") as f:
+        questions = yaml.safe_load(f)
+
+    # Ajouter automatiquement chemin images du bon dossier
+    for q in questions:
+        if "image" in q and q["image"]:
+            q["image_path"] = f"{quizname}/{q['image']}"
+    return questions
+
 
 # -------------------------
 # Calculate theme scores
@@ -160,33 +189,40 @@ def index():
 
 @app.route("/quiz/start", methods=["GET","POST"])
 def quiz_start():
-    questions = load_questions()
-    all_themes = sorted({theme for q in questions for theme in q.get("themes", ["General"])})
+    quizzes = list_quizzes()
 
     if request.method == "POST":
+        quizname = request.form.get("quizname")
+        if not quizname:
+            return render_template("quiz_start.html", error="Please select a quiz", quizzes=quizzes)
         user_id = request.form.get("user_id")
-        selected_themes = request.form.getlist("themes")
+
         if not user_id:
-            return render_template("quiz_start.html", error="Please enter your identifier", all_themes=all_themes)
+            return render_template("quiz_start.html", error="Please enter your identifier", quizzes=quizzes)
 
+        questions = load_questions(quizname)
+
+        all_themes = sorted({theme for q in questions for theme in q.get("themes", ["General"])})
+
+        selected_themes = request.form.getlist("themes")
         if selected_themes:
-            questions_filtered = [q for q in questions if set(q.get("themes", ["General"])) & set(selected_themes)]
-        else:
-            questions_filtered = questions
+            questions = [q for q in questions if set(q.get("themes", [])) & set(selected_themes)]
 
-        for q in questions_filtered:
+        for q in questions:
             options = q.get("options", [])
             q["shuffled_options"] = options.copy()
             random.shuffle(q["shuffled_options"])
 
         QUIZ_DATA[user_id] = {
-            "questions": questions_filtered,
+            "quizname": quizname,
+            "questions": questions,
             "start_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
         session["user_id"] = user_id
         return redirect(url_for("quiz_question_nav", qid=0))
 
-    return render_template("quiz_start.html", all_themes=all_themes)
+    return render_template("quiz_start.html", quizzes=quizzes)
+
 
 
 @app.route("/quiz/question/<int:qid>", methods=["GET", "POST"])
@@ -273,6 +309,10 @@ def quiz_report_download():
         download_name=f"report_{user_id}.pdf",
         mimetype="application/pdf"
     )
+
+@app.route('/data/<path:filepath>')
+def serve_quiz_image(filepath):
+    return send_file(os.path.join(DATA_DIR, filepath))
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

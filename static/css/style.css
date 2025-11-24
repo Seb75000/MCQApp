@@ -80,3 +80,37 @@ input:focus, select:focus, textarea:focus {
 hr {
     border-color: #333;
 }
+
+/* Quick navigation buttons */
+.nav-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.2s ease;
+}
+
+/* Unanswered → black */
+.nav-btn.unanswered {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+.nav-btn.unanswered:hover {
+    background-color: #222222;
+}
+
+/* Answered → blue */
+.nav-btn.answered {
+    background-color: #2196f3;
+    color: #ffffff;
+}
+.nav-btn.answered:hover {
+    background-color: #1976d2;
+}
+
+/* Current question → border */
+.nav-btn.current {
+    border: 2px solid #ffffff !important;
+}

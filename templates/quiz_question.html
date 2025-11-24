@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- Titre et barre de progression -->
+<!-- Title and progress bar -->
 <h2 class="mb-3">Question {{ index }} / {{ total }}</h2>
 
 <div class="progress mb-4" style="height: 25px;">
@@ -12,11 +12,11 @@
   </div>
 </div>
 
-<!-- Contenu de la question -->
+<!-- Question content -->
 <p class="fw-bold">{{ question.question }}</p>
 
-{% if question.image %}
-  <img src="{{ url_for('static', filename=question.image) }}" class="img-fluid mb-3 rounded shadow">
+{% if question.image_path %}
+  <img src="/data/{{ question.image_path }}" class="img-fluid mb-3 rounded shadow">
 {% endif %}
 
 <form method="POST">
@@ -32,39 +32,38 @@
   </div>
   {% endfor %}
 
-  <!-- Boutons navigation -->
+  <!-- Navigation buttons -->
   <div class="mt-4 d-flex justify-content-between">
     {% if index > 1 %}
-      <button type="submit" name="prev" class="btn btn-secondary">← Précédente</button>
+      <button type="submit" name="prev" class="btn btn-secondary">← Previous</button>
     {% else %}
       <div></div>
     {% endif %}
 
     {% if index < total %}
-      <button type="submit" name="next" class="btn btn-primary">Suivante →</button>
+      <button type="submit" name="next" class="btn btn-primary">Next →</button>
     {% else %}
-      <button type="submit" name="finish" class="btn btn-success">Terminer</button>
+      <button type="submit" name="finish" class="btn btn-success">Finish</button>
     {% endif %}
   </div>
 </form>
 
 <hr class="my-4">
 
-<!-- 🔵 Navigation rapide -->
-<h5>Navigation rapide :</h5>
+<h5>Fast navigation :</h5>
 <div class="d-flex flex-wrap gap-2">
   {% for i in range(total) %}
     {% set current = (i + 1 == index) %}
     {% if answered[i] %}
-      <!-- Répondu -->
+      <!-- Answered -->
       <a href="{{ url_for('quiz_question_nav', qid=i) }}"
-         class="btn btn-sm btn-success {% if current %}border border-dark border-2{% endif %}">
+         class="nav-btn answered {% if current %}current{% endif %}">
          Q{{ i + 1 }}
       </a>
     {% else %}
-      <!-- Non répondu -->
+      <!-- Unanswered -->
       <a href="{{ url_for('quiz_question_nav', qid=i) }}"
-         class="btn btn-sm btn-outline-secondary {% if current %}border border-dark border-2{% endif %}">
+         class="nav-btn unanswered {% if current %}current{% endif %}">
          Q{{ i + 1 }}
       </a>
     {% endif %}

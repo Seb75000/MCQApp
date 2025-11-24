@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <form method="post">
+
+  <label for="quizname">Chose a quiz :</label>
+  <select name="quizname" id="quizname" required class="form-select mb-3">
+    {% for q in quizzes %}
+      <option value="{{ q }}">{{ q|capitalize }}</option>
+    {% endfor %}
+  </select>
+
     <label for="user_id">Your Name / ID:</label>
     <input type="text" name="user_id" id="user_id" required>
     
