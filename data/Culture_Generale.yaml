@@ -1,0 +1,630 @@
+# Quiz Culture Générale : Science, Histoire, Géographie, Sport, Art (40 questions)
+
+# ==========================================
+# THÈME 1 : SCIENCE (Questions 1 à 8)
+# ==========================================
+- id: 1
+  question: "Quel est le symbole chimique de l'or dans le tableau périodique des éléments ?"
+  options:
+    - "Au"
+    - "Ag"
+    - "Fe"
+    - "Or"
+  correct_answers:
+    - "Au"
+  themes:
+    - "Science"
+  difficulty: 1
+  image: null
+  explanations: "Le symbole Au vient du latin 'aurum'."
+
+- id: 2
+  question: "Quelle est la vitesse approximative de la lumière dans le vide ?"
+  options:
+    - "300 000 km/s"
+    - "150 000 km/s"
+    - "30 000 km/s"
+    - "1 080 000 km/s"
+  correct_answers:
+    - "300 000 km/s"
+  themes:
+    - "Science"
+  difficulty: 1
+  image: null
+  explanations: "La vitesse de la lumière dans le vide est d'environ 299 792 km/s."
+
+- id: 3
+  question: "Lesquelles de ces planètes du système solaire sont des géantes gazeuses ou de glaces ?"
+  options:
+    - "Jupiter"
+    - "Saturne"
+    - "Mars"
+    - "Vénus"
+  correct_answers:
+    - "Jupiter"
+    - "Saturne"
+  themes:
+    - "Science"
+  difficulty: 2
+  image: null
+  explanations: "Jupiter et Saturne sont des géantes gazeuses ; Mars et Vénus sont des planètes telluriques."
+
+- id: 4
+  question: "Quel organite cellulaire est surnommé la « centrale énergétique » de la cellule ?"
+  options:
+    - "La mitochondrie"
+    - "Le ribosome"
+    - "L'appareil de Golgi"
+    - "Le lysosome"
+  correct_answers:
+    - "La mitochondrie"
+  themes:
+    - "Science"
+  difficulty: 2
+  image: null
+  explanations: "La mitochondrie produit la majeure partie de l'ATP cellulaire par respiration cellulaire."
+
+- id: 5
+  question: "Qui a formulé la théorie de la relativité générale en 1915 ?"
+  options:
+    - "Albert Einstein"
+    - "Isaac Newton"
+    - "Niels Bohr"
+    - "Max Planck"
+  correct_answers:
+    - "Albert Einstein"
+  themes:
+    - "Science"
+  difficulty: 1
+  image: null
+  explanations: "Albert Einstein publie la relativité restreinte en 1905 puis la relativité générale en 1915."
+
+- id: 6
+  question: "Quel gaz est le plus abondant dans l'atmosphère terrestre ?"
+  options:
+    - "Le diazote (N2)"
+    - "Le dioxygène (O2)"
+    - "Le dioxyde de carbone (CO2)"
+    - "L'argon (Ar)"
+  correct_answers:
+    - "Le diazote (N2)"
+  themes:
+    - "Science"
+  difficulty: 2
+  image: null
+  explanations: "L'air sec contient environ 78 % de diazote et 21 % de dioxygène."
+
+- id: 7
+  question: "Quelles bases azotées entrent dans la composition de la molécule d'ADN ?"
+  options:
+    - "Adénine"
+    - "Thymine"
+    - "Cytosine"
+    - "Uracile"
+  correct_answers:
+    - "Adénine"
+    - "Thymine"
+    - "Cytosine"
+  themes:
+    - "Science"
+  difficulty: 3
+  image: null
+  explanations: "L'ADN comporte l'adénine (A), la thymine (T), la cytosine (C) et la guanine (G). L'uracile (U) remplace la thymine dans l'ARN."
+
+- id: 8
+  question: "Quelle est l'unité de mesure de la résistance électrique dans le Système international ?"
+  options:
+    - "L'ohm (Ω)"
+    - "L'ampère (A)"
+    - "Le volt (V)"
+    - "Le watt (W)"
+  correct_answers:
+    - "L'ohm (Ω)"
+  themes:
+    - "Science"
+  difficulty: 2
+  image: null
+  explanations: "D'après la loi d'Ohm (U = R × I), la résistance R s'exprime en ohms (Ω)."
+
+# ==========================================
+# THÈME 2 : HISTOIRE (Questions 9 à 16)
+# ==========================================
+- id: 9
+  question: "En quelle année a eu lieu la prise de la Bastille ?"
+  options:
+    - "1789"
+    - "1792"
+    - "1804"
+    - "1776"
+  correct_answers:
+    - "1789"
+  themes:
+    - "Histoire"
+  difficulty: 1
+  image: null
+  explanations: "La Bastille a été prise le 14 juillet 1789 à Paris."
+
+- id: 10
+  question: "Quel traité a mis fin à la Première Guerre mondiale entre les Alliés et l'Allemagne en 1919 ?"
+  options:
+    - "Le traité de Versailles"
+    - "Le traité de Vienne"
+    - "Le traité de Maastricht"
+    - "Le traité de Tordesillas"
+  correct_answers:
+    - "Le traité de Versailles"
+  themes:
+    - "Histoire"
+  difficulty: 1
+  image: null
+  explanations: "Le traité de Versailles a été signé le 28 juin 1919 dans la galerie des Glaces."
+
+- id: 11
+  question: "Qui était le premier empereur romain ?"
+  options:
+    - "Auguste"
+    - "Jules César"
+    - "Néron"
+    - "Marc Aurèle"
+  correct_answers:
+    - "Auguste"
+  themes:
+    - "Histoire"
+  difficulty: 2
+  image: null
+  explanations: "Octave devient le premier empereur romain sous le nom d'Auguste en 27 av. J.-C."
+
+- id: 12
+  question: "En quelle année est tombé le mur de Berlin ?"
+  options:
+    - "1989"
+    - "1991"
+    - "1985"
+    - "1979"
+  correct_answers:
+    - "1989"
+  themes:
+    - "Histoire"
+  difficulty: 1
+  image: null
+  explanations: "Le mur de Berlin est tombé dans la nuit du 9 novembre 1989."
+
+- id: 13
+  question: "Quels pays faisaient partie de la Triple-Entente au début de la Première Guerre mondiale (1914) ?"
+  options:
+    - "La France"
+    - "Le Royaume-Uni"
+    - "L'Empire russe"
+    - "L'Empire austro-hongrois"
+  correct_answers:
+    - "La France"
+    - "Le Royaume-Uni"
+    - "L'Empire russe"
+  themes:
+    - "Histoire"
+  difficulty: 2
+  image: null
+  explanations: "La Triple-Entente réunissait la France, le Royaume-Uni et la Russie face à la Triple-Alliance."
+
+- id: 14
+  question: "Quel navigateur a commandé la première expédition à réaliser le tour du monde (1519-1522) ?"
+  options:
+    - "Fernand de Magellan"
+    - "Christophe Colomb"
+    - "Vasco de Gama"
+    - "Jacques Cartier"
+  correct_answers:
+    - "Fernand de Magellan"
+  themes:
+    - "Histoire"
+  difficulty: 2
+  image: null
+  explanations: "L'expédition initiée par Magellan en 1519 a été achevée par Juan Sebastián Elcano en 1522."
+
+- id: 15
+  question: "Sous le règne de quel roi de France l'édit de Nantes a-t-il été signé en 1598 ?"
+  options:
+    - "Henri IV"
+    - "François Ier"
+    - "Louis XIV"
+    - "Louis XIII"
+  correct_answers:
+    - "Henri IV"
+  themes:
+    - "Histoire"
+  difficulty: 2
+  image: null
+  explanations: "Henri IV a signé l'édit de Nantes en avril 1598 pour mettre fin aux guerres de Religion. Louis XIV l'a révoqué en 1685."
+
+- id: 16
+  question: "En quelle année l'homme a-t-il marché sur la Lune pour la première fois (mission Apollo 11) ?"
+  options:
+    - "1969"
+    - "1961"
+    - "1972"
+    - "1965"
+  correct_answers:
+    - "1969"
+  themes:
+    - "Histoire"
+  difficulty: 1
+  image: null
+  explanations: "Neil Armstrong et Buzz Aldrin ont marché sur la Lune le 20/21 juillet 1969."
+
+# ==========================================
+# THÈME 3 : GÉOGRAPHIE (Questions 17 à 24)
+# ==========================================
+- id: 17
+  question: "Quelle est la capitale de l'Australie ?"
+  options:
+    - "Canberra"
+    - "Sydney"
+    - "Melbourne"
+    - "Perth"
+  correct_answers:
+    - "Canberra"
+  themes:
+    - "Géographie"
+  difficulty: 1
+  image: null
+  explanations: "Canberra a été choisie comme capitale fédérale en 1908 comme compromis entre Sydney et Melbourne."
+
+- id: 18
+  question: "Quel est le plus long fleuve d'Afrique ?"
+  options:
+    - "Le Nil"
+    - "Le Congo"
+    - "Le Niger"
+    - "Le Zambèze"
+  correct_answers:
+    - "Le Nil"
+  themes:
+    - "Géographie"
+  difficulty: 1
+  image: null
+  explanations: "Le Nil s'étend sur environ 6 650 km jusqu'à la mer Méditerranée."
+
+- id: 19
+  question: "Lesquels de ces pays ont une frontière terrestre avec la France métropolitaine ?"
+  options:
+    - "La Belgique"
+    - "L'Italie"
+    - "L'Autriche"
+    - "Les Pays-Bas"
+  correct_answers:
+    - "La Belgique"
+    - "L'Italie"
+  themes:
+    - "Géographie"
+  difficulty: 2
+  image: null
+  explanations: "La France métropolitaine partage ses frontières avec la Belgique, le Luxembourg, l'Allemagne, la Suisse, l'Italie, Monaco, l'Espagne et Andorre."
+
+- id: 20
+  question: "Dans quelle chaîne de montagnes se situe le mont Everest ?"
+  options:
+    - "L'Himalaya"
+    - "La cordillère des Andes"
+    - "Les Alpes"
+    - "Le Caucase"
+  correct_answers:
+    - "L'Himalaya"
+  themes:
+    - "Géographie"
+  difficulty: 1
+  image: null
+  explanations: "L'Everest culmine à 8 848,86 mètres dans la chaîne de l'Himalaya, à la frontière entre le Népal et la Chine."
+
+- id: 21
+  question: "Quel détroit sépare l'Espagne du Maroc ?"
+  options:
+    - "Le détroit de Gibraltar"
+    - "Le détroit du Bosphore"
+    - "Le détroit de Béring"
+    - "Le détroit d'Ormuz"
+  correct_answers:
+    - "Le détroit de Gibraltar"
+  themes:
+    - "Géographie"
+  difficulty: 1
+  image: null
+  explanations: "Le détroit de Gibraltar relie l'océan Atlantique à la mer Méditerranée."
+
+- id: 22
+  question: "Quel est le plus grand océan de la planète en superficie ?"
+  options:
+    - "L'océan Pacifique"
+    - "L'océan Atlantique"
+    - "L'océan Indien"
+    - "L'océan Arctique"
+  correct_answers:
+    - "L'océan Pacifique"
+  themes:
+    - "Géographie"
+  difficulty: 1
+  image: null
+  explanations: "L'océan Pacifique couvre environ un tiers de la surface de la Terre."
+
+- id: 23
+  question: "Quels pays sont traversés par la cordillère des Andes ?"
+  options:
+    - "Le Chili"
+    - "Le Pérou"
+    - "La Colombie"
+    - "Le Paraguay"
+  correct_answers:
+    - "Le Chili"
+    - "Le Pérou"
+    - "La Colombie"
+  themes:
+    - "Géographie"
+  difficulty: 3
+  image: null
+  explanations: "Les Andes traversent 7 pays : Venezuela, Colombie, Équateur, Pérou, Bolivie, Chili et Argentine."
+
+- id: 24
+  question: "Quelle est la capitale du Canada ?"
+  options:
+    - "Ottawa"
+    - "Toronto"
+    - "Montréal"
+    - "Vancouver"
+  correct_answers:
+    - "Ottawa"
+  themes:
+    - "Géographie"
+  difficulty: 2
+  image: null
+  explanations: "Ottawa, située dans la province de l'Ontario, est la capitale fédérale du Canada."
+
+# ==========================================
+# THÈME 4 : SPORT (Questions 25 à 32)
+# ==========================================
+- id: 25
+  question: "Combien de joueurs composent une équipe de football sur le terrain au coup d'envoi ?"
+  options:
+    - "11"
+    - "10"
+    - "12"
+    - "15"
+  correct_answers:
+    - "11"
+  themes:
+    - "Sport"
+  difficulty: 1
+  image: null
+  explanations: "Une équipe de football aligne 11 joueurs (dont 1 gardien de but)."
+
+- id: 26
+  question: "Sur quelle surface se joue le tournoi de tennis de Roland-Garros ?"
+  options:
+    - "Terre battue"
+    - "Gazon"
+    - "Dur (synthétique)"
+    - "Moquette"
+  correct_answers:
+    - "Terre battue"
+  themes:
+    - "Sport"
+  difficulty: 1
+  image: null
+  explanations: "Roland-Garros est le seul tournoi du Grand Chelem disputé sur terre battue."
+
+- id: 27
+  question: "Quelle est la distance officielle d'un marathon ?"
+  options:
+    - "42,195 km"
+    - "40,000 km"
+    - "45,500 km"
+    - "50,000 km"
+  correct_answers:
+    - "42,195 km"
+  themes:
+    - "Sport"
+  difficulty: 2
+  image: null
+  explanations: "La distance de 42,195 km a été fixée lors des Jeux olympiques de Londres en 1908."
+
+- id: 28
+  question: "Lesquels de ces tournois font partie du Grand Chelem de tennis ?"
+  options:
+    - "Wimbledon"
+    - "L'Open d'Australie"
+    - "L'US Open"
+    - "Le Masters de Monte-Carlo"
+  correct_answers:
+    - "Wimbledon"
+    - "L'Open d'Australie"
+    - "L'US Open"
+  themes:
+    - "Sport"
+  difficulty: 2
+  image: null
+  explanations: "Les 4 tournois du Grand Chelem sont l'Open d'Australie, Roland-Garros, Wimbledon et l'US Open."
+
+- id: 29
+  question: "En quelles années l'équipe de France masculine de football a-t-elle remporté la Coupe du monde ?"
+  options:
+    - "1998"
+    - "2018"
+    - "2006"
+    - "2022"
+  correct_answers:
+    - "1998"
+    - "2018"
+  themes:
+    - "Sport"
+  difficulty: 2
+  image: null
+  explanations: "La France a remporté la Coupe du monde en 1998 et en 2018 (et a été finaliste en 2006 et 2022)."
+
+- id: 30
+  question: "Quel sprinteur jamaïcain détient le record du monde du 100 mètres en 9,58 secondes ?"
+  options:
+    - "Usain Bolt"
+    - "Yohan Blake"
+    - "Asafa Powell"
+    - "Carl Lewis"
+  correct_answers:
+    - "Usain Bolt"
+  themes:
+    - "Sport"
+  difficulty: 1
+  image: null
+  explanations: "Usain Bolt a établi ce record le 16 août 2009 aux championnats du monde de Berlin."
+
+- id: 31
+  question: "Au basket-ball (règles FIBA), combien de temps dure un quart-temps ?"
+  options:
+    - "10 minutes"
+    - "12 minutes"
+    - "15 minutes"
+    - "20 minutes"
+  correct_answers:
+    - "10 minutes"
+  themes:
+    - "Sport"
+  difficulty: 2
+  image: null
+  explanations: "Un match FIBA compte 4 quart-temps de 10 minutes (contre 12 minutes en NBA)."
+
+- id: 32
+  question: "Combien d'anneaux figurent sur le drapeau olympique ?"
+  options:
+    - "5"
+    - "4"
+    - "6"
+    - "7"
+  correct_answers:
+    - "5"
+  themes:
+    - "Sport"
+  difficulty: 1
+  image: null
+  explanations: "Les 5 anneaux entrelacés (bleu, jaune, noir, vert, rouge) représentent les cinq continents unis par l'olympisme."
+
+# ==========================================
+# THÈME 5 : ART (Questions 33 à 40)
+# ==========================================
+- id: 33
+  question: "Qui a peint « La Joconde » (Mona Lisa) ?"
+  options:
+    - "Léonard de Vinci"
+    - "Michel-Ange"
+    - "Raphaël"
+    - "Sandro Botticelli"
+  correct_answers:
+    - "Léonard de Vinci"
+  themes:
+    - "Art"
+  difficulty: 1
+  image: null
+  explanations: "Léonard de Vinci a peint La Joconde au début du XVIe siècle ; elle est exposée au musée du Louvre."
+
+- id: 34
+  question: "Quel peintre espagnol a réalisé la fresque monumentale « Guernica » en 1937 ?"
+  options:
+    - "Pablo Picasso"
+    - "Salvador Dalí"
+    - "Joan Miró"
+    - "Francisco de Goya"
+  correct_answers:
+    - "Pablo Picasso"
+  themes:
+    - "Art"
+  difficulty: 1
+  image: null
+  explanations: "Guernica a été peint par Pablo Picasso en réaction au bombardement de la ville basque de Guernica en avril 1937."
+
+- id: 35
+  question: "Quel compositeur a écrit « Les Quatre Saisons » ?"
+  options:
+    - "Antonio Vivaldi"
+    - "Wolfgang Amadeus Mozart"
+    - "Ludwig van Beethoven"
+    - "Jean-Sébastien Bach"
+  correct_answers:
+    - "Antonio Vivaldi"
+  themes:
+    - "Art"
+  difficulty: 2
+  image: null
+  explanations: "Les Quatre Saisons sont quatre concertos pour violon composés par Antonio Vivaldi et publiés en 1725."
+
+- id: 36
+  question: "Lesquels de ces artistes sont rattachés au mouvement impressionniste ?"
+  options:
+    - "Claude Monet"
+    - "Pierre-Auguste Renoir"
+    - "Edgar Degas"
+    - "Andy Warhol"
+  correct_answers:
+    - "Claude Monet"
+    - "Pierre-Auguste Renoir"
+    - "Edgar Degas"
+  themes:
+    - "Art"
+  difficulty: 2
+  image: null
+  explanations: "Monet, Renoir et Degas sont des figures majeures de l'impressionnisme du XIXe siècle, tandis qu'Andy Warhol est une figure du Pop Art."
+
+- id: 37
+  question: "Qui a sculpté « Le Penseur » ?"
+  options:
+    - "Auguste Rodin"
+    - "Camille Claudel"
+    - "Alberto Giacometti"
+    - "Constantin Brâncuși"
+  correct_answers:
+    - "Auguste Rodin"
+  themes:
+    - "Art"
+  difficulty: 2
+  image: null
+  explanations: "Le Penseur d'Auguste Rodin faisait initialement partie de son œuvre monumentale La Porte de l'Enfer."
+
+- id: 38
+  question: "Dans quel musée new-yorkais est conservée « La Nuit étoilée » (1889) de Vincent van Gogh ?"
+  options:
+    - "Le MoMA (Museum of Modern Art)"
+    - "Le Louvre"
+    - "Le musée du Prado"
+    - "La Galerie des Offices"
+  correct_answers:
+    - "Le MoMA (Museum of Modern Art)"
+  themes:
+    - "Art"
+  difficulty: 3
+  image: null
+  explanations: "La Nuit étoilée de juin 1889 fait partie de la collection permanente du MoMA à New York depuis 1941."
+
+- id: 39
+  question: "Quel architecte catalan a conçu la Sagrada Família à Barcelone ?"
+  options:
+    - "Antoni Gaudí"
+    - "Le Corbusier"
+    - "Frank Lloyd Wright"
+    - "Oscar Niemeyer"
+  correct_answers:
+    - "Antoni Gaudí"
+  themes:
+    - "Art"
+  difficulty: 2
+  image: null
+  explanations: "Antoni Gaudí a consacré plus de quarante ans de sa vie au chantier de la Sagrada Família."
+
+- id: 40
+  question: "Quelles œuvres ont été écrites par Victor Hugo ?"
+  options:
+    - "Les Misérables"
+    - "Notre-Dame de Paris"
+    - "Le Rouge et le Noir"
+    - "Madame Bovary"
+  correct_answers:
+    - "Les Misérables"
+    - "Notre-Dame de Paris"
+  themes:
+    - "Art"
+  difficulty: 2
+  image: null
+  explanations: "Les Misérables (1862) et Notre-Dame de Paris (1831) sont de Victor Hugo. Le Rouge et le Noir est de Stendhal et Madame Bovary de Gustave Flaubert."

@@ -1,0 +1,8 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.tar
+cheat.txt
+deploy.sh
+reports/

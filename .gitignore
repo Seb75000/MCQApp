@@ -1,6 +1,9 @@
 /cheat.txt
 /deploy.sh
-/docker-compose.yml
-/dockerfile
 /venv
 /quizapp.tar
+/reports
+__pycache__/
+*.pyc
+/.opencode
+/question.json

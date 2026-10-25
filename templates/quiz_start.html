@@ -1,32 +1,100 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2>Configure Your Quiz</h2>
 
-<form method="post">
+{% if error %}
+  <div class="alert alert-danger mb-3">{{ error }}</div>
+{% endif %}
 
-  <label for="quizname">Chose a quiz :</label>
-  <select name="quizname" id="quizname" required class="form-select mb-3">
-    {% for q in quizzes %}
-      <option value="{{ q }}">{{ q|capitalize }}</option>
-    {% endfor %}
-  </select>
+<form method="post" class="card p-4">
+  <div class="mb-3">
+    <label for="quizname" class="form-label fw-bold">Choose a quiz:</label>
+    <select name="quizname" id="quizname" required class="form-select">
+      {% for q in quizzes %}
+        <option value="{{ q }}">{{ q|capitalize }}</option>
+      {% endfor %}
+    </select>
+  </div>
 
-    <label for="user_id">Your Name / ID:</label>
-    <input type="text" name="user_id" id="user_id" required>
-    
-    <fieldset>
-        <legend>Select Themes (optional)</legend>
-        {% for theme in all_themes %}
-            <input type="checkbox" name="themes" value="{{ theme }}" id="theme_{{ loop.index }}" checked>
-            <label for="theme_{{ loop.index }}">{{ theme }}</label><br>
-        {% endfor %}
-    </fieldset>
-    
-    <button type="submit">Start Quiz</button>
-    
-    {% if error %}
-        <p style="color:red">{{ error }}</p>
-    {% endif %}
+  <div class="mb-3">
+    <label for="user_id" class="form-label fw-bold">Your Name / ID:</label>
+    <input type="text" name="user_id" id="user_id" class="form-control" placeholder="e.g. alice" required>
+  </div>
+
+  <fieldset class="mb-3">
+    <legend class="fs-6 fw-bold">Select Themes (optional):</legend>
+    <div id="themes-container" class="d-flex flex-wrap gap-3">
+      {% for theme in all_themes %}
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="themes" value="{{ theme }}" id="theme_{{ loop.index }}" checked>
+          <label class="form-check-label" for="theme_{{ loop.index }}">{{ theme }}</label>
+        </div>
+      {% endfor %}
+    </div>
+  </fieldset>
+
+  <div class="row g-3 mb-3">
+    <div class="col-md-6">
+      <label for="max_questions" class="form-label fw-bold">Max number of questions (optional):</label>
+      <input type="number" min="1" name="max_questions" id="max_questions" class="form-control" placeholder="All questions">
+    </div>
+    <div class="col-md-6">
+      <label for="timer_minutes" class="form-label fw-bold">Timer in minutes (optional):</label>
+      <input type="number" min="1" name="timer_minutes" id="timer_minutes" class="form-control" placeholder="No time limit">
+    </div>
+  </div>
+
+  <div class="form-check mb-4">
+    <input class="form-check-input" type="checkbox" name="shuffle_questions" id="shuffle_questions" checked>
+    <label class="form-check-label" for="shuffle_questions">
+      Shuffle question order
+    </label>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-primary">Start Quiz</button>
+  </div>
 </form>
+
+<script>
+  const quizSelect = document.getElementById("quizname");
+  const themesContainer = document.getElementById("themes-container");
+
+  if (quizSelect) {
+    quizSelect.addEventListener("change", async () => {
+      const quiz = quizSelect.value;
+      try {
+        const res = await fetch(`/api/quiz/${encodeURIComponent(quiz)}/themes`);
+        if (!res.ok) return;
+        const data = await res.json();
+        themesContainer.innerHTML = "";
+        (data.themes || []).forEach((theme, idx) => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "form-check";
+
+          const input = document.createElement("input");
+          input.className = "form-check-input";
+          input.type = "checkbox";
+          input.name = "themes";
+          input.value = theme;
+          input.id = `theme_${idx + 1}`;
+          input.checked = true;
+
+          const label = document.createElement("label");
+          label.className = "form-check-label";
+          label.htmlFor = input.id;
+          label.textContent = theme;
+
+          wrapper.appendChild(input);
+          wrapper.appendChild(label);
+          themesContainer.appendChild(wrapper);
+        });
+      } catch (e) {
+        console.error("Failed to load themes", e);
+      }
+    });
+  }
+</script>
 
 {% endblock %}

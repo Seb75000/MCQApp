@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    container_name: mcqapp
+    ports:
+      - "${PORT:-5000}:5000"
+    environment:
+      FLASK_DEBUG: "${FLASK_DEBUG:-0}"
+      PORT: "5000"
+      SECRET_KEY: "${SECRET_KEY:-change-this-secret-key}"
+    volumes:
+      - ./data:/app/data:ro
+      - ./reports:/app/reports
+    restart: unless-stopped
