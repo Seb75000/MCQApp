@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<p class="fw-bold fs-5">{{ question.question }}</p>
+<p class="fw-bold fs-5" style="white-space: pre-wrap;">{{ question.question }}</p>
 
 {% set is_single = (question.correct_answers | length == 1) and not question.multiple %}
 <p class="text-secondary small mb-3">

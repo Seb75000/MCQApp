@@ -1,0 +1,20 @@
+
+48 - Dans les flux standards d'un terminal Linux, à quoi correspondent les descripteurs de fichiers 0, 1 et 2 ?
+
+49 - Quelle est la différence fondamentale entre les signaux SIGTERM (15) et SIGKILL (9) lorsqu'on souhaite arrêter un processus ?
+
+50 - Comment fonctionne le mécanisme des liens symboliques (symlink) par rapport aux liens physiques (hard link) sous Linux ?
+
+51 - Qu'est-ce qu'un fichier /etc/fstab et quel est son rôle critique lors du démarrage du système ?
+
+52 - Qu'est ce que le fichier /var/log/messages ?
+
+53 - Quel type d'enregistrement DNS (Resource Record) est spécifiquement utilisé pour associer un nom de domaine à une adresse IPv6 ?
+
+54 - Comment fonctionne le mécanisme de NAT/PAT (Network Address Translation / Port Address Translation) et quel problème d'épuisement d'adresses permet-il de mitiger au sein d'un réseau local ?
+
+55 - Quel est le rôle principal d'un proxy inverse (reverse proxy) par rapport à un proxy traditionnel (forward proxy) dans une architecture web ?
+
+56 - Lors de l'établissement d'une connexion sécurisée en HTTPS, à quel moment chronologique exact intervient la négociation TLS (TLS Handshake) par rapport à la poignée de main TCP (TCP 3-way handshake) ?
+
+59 - Quels sont les mécanismes fondamentaux introduits par le protocole QUIC (utilisé par HTTP/3 au-dessus d'UDP) pour éliminer le problème du blocage en tête de ligne (head-of-line blocking) inhérent à TCP ?

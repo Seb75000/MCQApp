@@ -75,7 +75,7 @@ def load_questions(quizname):
 
     for q in questions:
         if "image" in q and q["image"]:
-            q["image_path"] = f"{quizname}/{q['image']}"
+            q["image_path"] = q["image"]
     return questions
 
 

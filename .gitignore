@@ -7,3 +7,5 @@ __pycache__/
 *.pyc
 /.opencode
 /question.json
+.DS_Store
+flask.log

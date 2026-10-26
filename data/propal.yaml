@@ -1,0 +1,853 @@
+- id: 1
+  question: "Quels sont les ports standards des protocoles HTTP, DNS, SSH, HTTPS, SMTP et Syslog ?"
+  options:
+    - "HTTP:80, DNS:53, SSH:22, HTTPS:443, SMTP:25, Syslog:514"
+    - "HTTP:80, DNS:53, SSH:22, HTTPS:443, SMTP:587, Syslog:514"
+    - "HTTP:8080, DNS:53, SSH:22, HTTPS:443, SMTP:25, Syslog:514"
+    - "HTTP:80, DNS:137, SSH:22, HTTPS:443, SMTP:25, Syslog:514"
+  correct_answers:
+    - "HTTP:80, DNS:53, SSH:22, HTTPS:443, SMTP:25, Syslog:514"
+  themes:
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 2
+  question: "Que font ces deux lignes de log dnsmasq ?\n\tFeb 18 00:06:26 dnsmasq[21302]: query[PTR] 191.3.16.172.in-addr.arpa from 172.16.2.30\n\tFeb 18 00:06:26 dnsmasq[21302]: query[response] PTR cache1158.ns.eu.uu.net"
+  options:
+    - "Une résolution DNS inverse (PTR) de l'IP 172.16.3.191, répondue par cache1158.ns.eu.uu.net"
+    - "Une résolution DNS directe (A) du nom cache1158.ns.eu.uu.net"
+    - "Un transfert de zone DNS entre deux serveurs"
+    - "Une requête DHCP pour l'adresse 172.16.3.191"
+  correct_answers:
+    - "Une résolution DNS inverse (PTR) de l'IP 172.16.3.191, répondue par cache1158.ns.eu.uu.net"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: null
+
+- id: 3
+  question: "Commentez cette ligne de log :\nFeb 18 00:06:26 baltazard[21302]: chilli.c: 5022: Client MAC=00-22-96-04-55 assigned IP 10.2.244.255"
+  options:
+    - "Le portail captif CoovaChilli a attribué l'IP 10.2.244.255 au client dont l'adresse MAC est 00-22-96-04-55"
+    - "Un serveur DHCP standard a attribué l'IP 10.2.244.255 au client 00-22-96-04-55"
+    - "Le client 10.2.244.255 a été bloqué par le pare-feu à cause de son adresse MAC"
+    - "Le client a été déconnecté du réseau pour inactivité"
+  correct_answers:
+    - "Le portail captif CoovaChilli a attribué l'IP 10.2.244.255 au client dont l'adresse MAC est 00-22-96-04-55"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: null
+
+- id: 4
+  question: "Qu'affiche la commande : echo \"hello;world world,hello :!\"| awk -F'[ ;:]' '{print $0}'"
+  options:
+    - "hello;world world,hello :!"
+    - "hello"
+    - "hello world hello"
+    - "hello;world"
+  correct_answers:
+    - "hello;world world,hello :!"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 5
+  question: "Qu'affiche la commande : echo \"hello;world world,hello :!\" | grep -v \"hel\""
+  options:
+    - "Rien (la sortie est vide)"
+    - "hello;world world,hello :!"
+    - "world world, :!"
+    - "-v affiche la ligne complète"
+  correct_answers:
+    - "Rien (la sortie est vide)"
+  themes:
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 6
+  question: "Que fait la regexp : \\d{3}.\\d{3}.\\d{3}.\\d{3} ?"
+  options:
+    - "Elle correspond à une suite de 4 groupes de 3 chiffres séparés par n'importe quel caractère (ressemble à une adresse IP mais les points ne sont pas échappés)"
+    - "Elle correspond strictement à une adresse IPv4 valide (ex: 192.168.1.1)"
+    - "Elle correspond à un numéro de téléphone à 12 chiffres"
+    - "Elle correspond à 4 groupes de 3 chiffres séparés exclusivement par des points"
+  correct_answers:
+    - "Elle correspond à une suite de 4 groupes de 3 chiffres séparés par n'importe quel caractère (ressemble à une adresse IP mais les points ne sont pas échappés)"
+  themes:
+    - "Réseau"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 7
+  question: "Que fait cette règle Snort ?\nalert tcp any any -> 192.168.1.0/24 111 (content:\"|00 01 02 03|\"; msg:\"coucou\";)"
+  options:
+    - "Elle génère une alerte quand un paquet TCP contenant la signature 00 01 02 03 est envoyé vers le port 111 (RPC) du réseau 192.168.1.0/24"
+    - "Elle bloque toutes les connexions TCP vers le réseau 192.168.1.0/24"
+    - "Elle autorise le trafic RPC depuis n'importe quelle source vers 192.168.1.0/24"
+    - "Elle enregistre les requêtes UDP vers le port 111"
+  correct_answers:
+    - "Elle génère une alerte quand un paquet TCP contenant la signature 00 01 02 03 est envoyé vers le port 111 (RPC) du réseau 192.168.1.0/24"
+  themes:
+    - "Sécurité"
+    - "Réseau"
+  difficulty: 3
+  image: null
+
+- id: 8
+  question: "À quoi correspond le code de retour HTTP 200 ?"
+  options:
+    - "OK - La requête a réussi"
+    - "Not Found - Ressource introuvable"
+    - "Created - Une ressource a été créée"
+    - "Unauthorized - Authentification requise"
+  correct_answers:
+    - "OK - La requête a réussi"
+  themes:
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 9
+  question: "À quoi correspond le code de retour HTTP 301 ?"
+  options:
+    - "Moved Permanently - La ressource a été déplacée de façon permanente"
+    - "Found - Redirection temporaire"
+    - "Not Modified - La ressource n'a pas changé"
+    - "Bad Request - Requête mal formée"
+  correct_answers:
+    - "Moved Permanently - La ressource a été déplacée de façon permanente"
+  themes:
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 10
+  question: "À quoi correspond le code de retour HTTP 400 ?"
+  options:
+    - "Bad Request - La requête est mal formée"
+    - "Unauthorized - Authentification requise"
+    - "Not Found - Ressource introuvable"
+    - "Internal Server Error - Erreur du serveur"
+  correct_answers:
+    - "Bad Request - La requête est mal formée"
+  themes:
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 11
+  question: "À quoi correspond le code de retour HTTP 403 ?"
+  options:
+    - "Forbidden - Accès interdit"
+    - "Not Found - Ressource introuvable"
+    - "Unauthorized - Authentification requise"
+    - "Method Not Allowed - Méthode non autorisée"
+  correct_answers:
+    - "Forbidden - Accès interdit"
+  themes:
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 12
+  question: "À quoi correspond le code de retour HTTP 500 ?"
+  options:
+    - "Internal Server Error - Erreur interne du serveur"
+    - "Bad Gateway - Passerelle invalide"
+    - "Service Unavailable - Service indisponible"
+    - "Not Implemented - Fonctionnalité non implémentée"
+  correct_answers:
+    - "Internal Server Error - Erreur interne du serveur"
+  themes:
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 13
+  question: "D'après l'enregistrement ci-dessous, qu'a fait l'utilisateur ?"
+  options:
+    - "Il a effectué une recherche web"
+    - "Il s'est connecté à un serveur FTP"
+    - "Il a envoyé un email"
+    - "Il a effectué une requête DNS"
+  correct_answers:
+    - "Il a effectué une recherche web"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: "propal/wireshark1.png"
+
+- id: 14
+  question: "Que montre cette capture Wireshark ?"
+  options:
+    - "L'utilisateur tape la recherche \"ouest france\" sur le moteur \"duckduckgo\", et sa demande est transmise caractère par caractère"
+    - "L'utilisateur télécharge un fichier depuis un serveur FTP"
+    - "L'utilisateur envoie un email en clair via SMTP"
+    - "L'utilisateur se connecte en SSH à un serveur distant"
+  correct_answers:
+    - "L'utilisateur tape la recherche \"ouest france\" sur le moteur \"duckduckgo\", et sa demande est transmise caractère par caractère"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: "propal/wireshark2.png"
+
+- id: 15
+  question: "Que fait le script Python suivant ?\n#!/usr/bin/env python\nfrom scapy.all import send, IP, ICMP\nsend(IP(src=\"10.0.99.100\",dst=\"10.1.99.100\")/ICMP()/\"Hello World\")"
+  options:
+    - "Il envoie un paquet ICMP (ping) avec spoofing de l'IP source 10.0.99.100 vers 10.1.99.100, contenant le message \"Hello World\""
+    - "Il écoute les paquets ICMP entre les deux adresses IP"
+    - "Il effectue un scan de port sur 10.1.99.100"
+    - "Il bloque tout trafic ICMP entre les deux réseaux"
+  correct_answers:
+    - "Il envoie un paquet ICMP (ping) avec spoofing de l'IP source 10.0.99.100 vers 10.1.99.100, contenant le message \"Hello World\""
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: null
+
+- id: 16
+  question: "Quel(s) couple(s) login/password permet(tent) de réaliser une injection SQL correcte ?"
+  options:
+    - "Login : Admin - Password : ' OR 1=1--"
+    - "Login : Admin' ; - Password : aucun mot de passe"
+    - "Login : Admin' ;# - Password : aucun mot de passe"
+    - "Login : User1 - Password : ' OR 1=1 ;--"
+  correct_answers:
+    - "Login : Admin - Password : ' OR 1=1--"
+    - "Login : Admin' ;# - Password : aucun mot de passe"
+  themes:
+    - "Sécurité"
+  difficulty: 3
+  image: "propal/sql.png"
+
+- id: 17
+  question: "À quel fichier correspond cette capture d'écran ?"
+  options:
+    - "/etc/shadow"
+    - "/etc/passwd"
+    - "/etc/group"
+    - "/etc/hosts"
+  correct_answers:
+    - "/etc/shadow"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: "propal/cap1.png"
+
+- id: 18
+  question: "À quel fichier correspond cette capture d'écran ?"
+  options:
+    - "/etc/apt/sources.list"
+    - "/etc/yum.conf"
+    - "/etc/resolv.conf"
+    - "/etc/fstab"
+  correct_answers:
+    - "/etc/apt/sources.list"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: "propal/cap2.png"
+
+- id: 19
+  question: "À quel fichier correspond cette capture d'écran ?"
+  options:
+    - "/etc/sudoers"
+    - "/etc/passwd"
+    - "/etc/shadow"
+    - "/etc/ssh/sshd_config"
+  correct_answers:
+    - "/etc/sudoers"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: "propal/cap3.png"
+
+- id: 20
+  question: "À quel fichier correspond cette capture d'écran ?"
+  options:
+    - "/etc/passwd"
+    - "/etc/shadow"
+    - "/etc/group"
+    - "/etc/hostname"
+  correct_answers:
+    - "/etc/passwd"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: "propal/cap4.png"
+
+- id: 21
+  question: "Que peut-on dire du fichier SAM ? (plusieurs réponses possibles)"
+  options:
+    - "Il contient les mots de passe hashés des utilisateurs Windows"
+    - "On peut le copier ou le déplacer lorsqu'une session Windows fonctionne"
+    - "Il se trouve dans \\System32\\config"
+    - "Il contient les mots de passe enregistrés par Mozilla"
+    - "Il se trouve dans \\Mozilla\\Firefox\\Profiles"
+    - "Il permet de protéger la configuration du BIOS"
+  correct_answers:
+    - "Il contient les mots de passe hashés des utilisateurs Windows"
+    - "Il se trouve dans \\System32\\config"
+  themes:
+    - "Système"
+    - "Windows"
+  difficulty: 2
+  image: null
+
+- id: 22
+  question: "Lesquels de ces logiciels sont des outils de forensic ? (plusieurs réponses possibles)"
+  options:
+    - "Autopsy"
+    - "EnCase"
+    - "FTK (Forensic Toolkit)"
+    - "Nmap"
+    - "Wireshark"
+    - "Nessus"
+  correct_answers:
+    - "Autopsy"
+    - "EnCase"
+    - "FTK (Forensic Toolkit)"
+  themes:
+    - "Forensic"
+  difficulty: 2
+  image: null
+
+- id: 23
+  question: "Lequel de ces moyens permet d'établir une persistance sur un système compromis ?"
+  options:
+    - "Ajout d'une clé de registre Run /HKLM"
+    - "Création d'une tâche planifiée (schtasks)"
+    - "Installation d'un service système"
+    - "Utilisation de PsExec pour une exécution à distance"
+  correct_answers:
+    - "Ajout d'une clé de registre Run /HKLM"
+    - "Création d'une tâche planifiée (schtasks)"
+    - "Installation d'un service système"
+  themes:
+    - "Forensic"
+  difficulty: 3
+  image: null
+
+- id: 24
+  question: "Lequel de ces moyens permet d'établir une latéralisation (mouvement latéral) ?"
+  options:
+    - "Pass-the-Hash avec Mimikatz"
+    - "Utilisation de WMI / PsExec vers un hôte distant"
+    - "RDP avec des identifiants volés"
+    - "Ajout d'une tâche planifiée locale"
+  correct_answers:
+    - "Pass-the-Hash avec Mimikatz"
+    - "Utilisation de WMI / PsExec vers un hôte distant"
+    - "RDP avec des identifiants volés"
+  themes:
+    - "Forensic"
+  difficulty: 3
+  image: null
+
+- id: 25
+  question: "Laquelle de ces propositions permet à IPTABLES d'interdire une connexion HTTP ?"
+  options:
+    - "iptables -A INPUT -p tcp --dport 80 -j DROP"
+    - "iptables -A INPUT -p udp --dport 80 -j DROP"
+    - "iptables -A INPUT -p tcp --dport 443 -j ACCEPT"
+    - "iptables -A OUTPUT -p tcp --dport 22 -j DROP"
+  correct_answers:
+    - "iptables -A INPUT -p tcp --dport 80 -j DROP"
+  themes:
+    - "Système"
+    - "Réseau"
+    - "Linux"
+  difficulty: 2
+  image: null
+
+- id: 26
+  question: "Qu'est-ce que le MITRE ATT&CK ?"
+  options:
+    - "Une base de connaissance sur les tactiques et techniques d'attaquants réels"
+    - "Un logiciel de pare-feu open source"
+    - "Un protocole de chiffrement réseau"
+    - "Un outil de scan de vulnérabilités"
+  correct_answers:
+    - "Une base de connaissance sur les tactiques et techniques d'attaquants réels"
+  themes:
+    - "Forensic"
+  difficulty: 2
+  image: null
+
+- id: 27
+  question: "Lors d'une attaque de type ARP Spoofing (ARP Cache Poisoning), quel est l'impact direct sur les tables ARP des victimes, et comment DAI (Dynamic ARP Inspection) s'en protège-t-il ?"
+  options:
+    - "Les tables ARP des victimes associent l'adresse MAC de l'attaquant à l'IP d'une autre machine ; DAI valide la cohérence des paquets ARP par rapport à la table DHCP snooping"
+    - "Les tables ARP sont vidées ; DAI désactive les ports suspects"
+    - "Les tables ARP sont figées ; DAI chiffre les requêtes ARP"
+    - "Les tables ARP associent l'IP de l'attaquant à la MAC de la passerelle ; DAI bloque tous les broadcasts ARP"
+  correct_answers:
+    - "Les tables ARP des victimes associent l'adresse MAC de l'attaquant à l'IP d'une autre machine ; DAI valide la cohérence des paquets ARP par rapport à la table DHCP snooping"
+  themes:
+    - "Réseau"
+  difficulty: 3
+  image: null
+
+- id: 28
+  question: "Quel champ de l'en-tête IPv6 a remplacé le champ Time to Live (TTL) d'IPv4, et quelle est sa fonction exacte ?"
+  options:
+    - "Le champ Hop Limit : il est décrémenté de 1 à chaque routeur traversé, et le paquet est rejeté quand il atteint 0"
+    - "Le champ Flow Label : il identifie les flux pour la qualité de service"
+    - "Le champ Traffic Class : il remplace le champ TOS d'IPv4"
+    - "Le champ Next Header : il indique le protocole de couche supérieure"
+  correct_answers:
+    - "Le champ Hop Limit : il est décrémenté de 1 à chaque routeur traversé, et le paquet est rejeté quand il atteint 0"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: null
+
+- id: 29
+  question: "Qu'est-ce qu'une attaque par rebond (TCP SYN Flood) ?"
+  options:
+    - "L'attaquant envoie massivement des paquets SYN sans jamais répondre aux SYN-ACK, saturant la file des connexions semi-ouvertes du serveur"
+    - "L'attaquant rebondit sur un serveur intermédiaire pour masquer son origine"
+    - "L'attaquant envoie des paquets TCP ACK en boucle pour saturer la bande passante"
+    - "L'attaquant injecte des segments TCP RST pour couper les connexions légitimes"
+  correct_answers:
+    - "L'attaquant envoie massivement des paquets SYN sans jamais répondre aux SYN-ACK, saturant la file des connexions semi-ouvertes du serveur"
+  themes:
+    - "Réseau"
+  difficulty: 3
+  image: null
+
+- id: 30
+  question: "Quel fichier de configuration sous Linux centralise généralement la résolution statique des noms d'hôtes vers leurs adresses IP ?"
+  options:
+    - "/etc/hosts"
+    - "/etc/resolv.conf"
+    - "/etc/nsswitch.conf"
+    - "/etc/hostname"
+  correct_answers:
+    - "/etc/hosts"
+  themes:
+    - "Linux"
+    - "Système"
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 31
+  question: "Dans le système de fichiers NTFS de Windows, que représente la MFT ?"
+  options:
+    - "Master File Table : une base de données qui contient un enregistrement pour chaque fichier et répertoire du volume, stockant leurs métadonnées et l'emplacement de leurs données"
+    - "Master File Transfer : un protocole de copie de fichiers Windows"
+    - "Main File Table : un index des fichiers temporaires du système"
+    - "Meta File Tracker : un journal des suppressions de fichiers"
+  correct_answers:
+    - "Master File Table : une base de données qui contient un enregistrement pour chaque fichier et répertoire du volume, stockant leurs métadonnées et l'emplacement de leurs données"
+  themes:
+    - "Windows"
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 32
+  question: "Sous Linux, quelle est la différence entre un processus zombie et un processus orphelin ?"
+  options:
+    - "Un processus zombie est terminé mais son entrée reste dans la table des processus en attendant que son père lise son statut de sortie ; un processus orphelin a perdu son père et est récupéré par init/systemd"
+    - "Un processus zombie consomme beaucoup de CPU ; un processus orphelin est en pause"
+    - "Un processus zombie ne peut pas être tué ; un processus orphelin est toujours en état D (uninterruptible sleep)"
+    - "Un processus zombie est un processus en cours d'exécution ; un processus orphelin est un processus arrêté"
+  correct_answers:
+    - "Un processus zombie est terminé mais son entrée reste dans la table des processus en attendant que son père lise son statut de sortie ; un processus orphelin a perdu son père et est récupéré par init/systemd"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 33
+  question: "Qu'est-ce que le principe du Least Privilege (moindre privilège) appliqué aux services systemd sous Linux ?"
+  options:
+    - "Chaque service ne reçoit que les droits strictement nécessaires à son fonctionnement (utilisateur dédié, capacités restreintes, espaces de noms isolés)"
+    - "Tous les services s'exécutent en tant que root pour simplifier la configuration"
+    - "Les services sont automatiquement désactivés après 24 heures"
+    - "Les services n'ont aucun accès réseau par défaut"
+  correct_answers:
+    - "Chaque service ne reçoit que les droits strictement nécessaires à son fonctionnement (utilisateur dédié, capacités restreintes, espaces de noms isolés)"
+  themes:
+    - "Linux"
+    - "Sécurité"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 34
+  question: "Dans l'architecture mémoire de Windows, quelle est la différence entre l'espace utilisateur (User Mode) et l'espace noyau (Kernel Mode) en termes de protection ?"
+  options:
+    - "Le mode utilisateur ne peut pas accéder directement à la mémoire du noyau ni exécuter d'instructions privilégiées ; le mode noyau a un accès complet au matériel et à toute la mémoire"
+    - "Le mode utilisateur a accès à toute la mémoire ; le mode noyau est restreint aux pilotes"
+    - "Les deux modes ont les mêmes droits, mais le mode noyau est plus rapide"
+    - "Le mode noyau est isolé dans une machine virtuelle séparée"
+  correct_answers:
+    - "Le mode utilisateur ne peut pas accéder directement à la mémoire du noyau ni exécuter d'instructions privilégiées ; le mode noyau a un accès complet au matériel et à toute la mémoire"
+  themes:
+    - "Windows"
+    - "Système"
+  difficulty: 3
+  image: null
+
+- id: 35
+  question: "Que permet le mécanisme d'ASLR (Address Space Layout Randomization) ?"
+  options:
+    - "De randomiser l'adresse de chargement en mémoire des exécutables, bibliothèques, pile et tas, pour rendre difficile l'exploitation de vulnérabilités de type buffer overflow"
+    - "De chiffrer le contenu de la mémoire vive"
+    - "De bloquer l'exécution de code non signé"
+    - "De compresser automatiquement les données en mémoire"
+  correct_answers:
+    - "De randomiser l'adresse de chargement en mémoire des exécutables, bibliothèques, pile et tas, pour rendre difficile l'exploitation de vulnérabilités de type buffer overflow"
+  themes:
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 36
+  question: "Sous Linux (x86_64), comment un appel système (syscall) passe-t-il l'exécution du mode utilisateur au mode noyau ?"
+  options:
+    - "Par l'instruction syscall (ou int 0x80 en mode legacy) qui bascule le processeur en mode noyau et saute vers le gestionnaire d'appels système"
+    - "Par un appel de fonction standard dans la bibliothèque libc"
+    - "Par une interruption logicielle int 0x03 (debug)"
+    - "Par un message envoyé au démon systemd via D-Bus"
+  correct_answers:
+    - "Par l'instruction syscall (ou int 0x80 en mode legacy) qui bascule le processeur en mode noyau et saute vers le gestionnaire d'appels système"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 3
+  image: null
+
+- id: 37
+  question: "Quel type de données volatiles cherche-t-on en priorité à collecter lors d'une acquisition sur une machine en cours de fonctionnement ?"
+  options:
+    - "Le contenu de la mémoire vive (RAM), les connexions réseau actives, les processus en cours d'exécution, les fichiers temporaires et le presse-papier"
+    - "Uniquement les fichiers sur le disque dur"
+    - "Les journaux système des 6 derniers mois"
+    - "Les mises à jour du système d'exploitation"
+  correct_answers:
+    - "Le contenu de la mémoire vive (RAM), les connexions réseau actives, les processus en cours d'exécution, les fichiers temporaires et le presse-papier"
+  themes:
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 38
+  question: "Dans le système de fichiers NTFS, où sont stockées les métadonnées des fichiers dont la taille est inférieure à environ 700-900 octets (fichiers dits résidents) ?"
+  options:
+    - "Directement dans l'enregistrement de la MFT (Master File Table), dans l'attribut $DATA"
+    - "Dans un cluster séparé pointé par la MFT"
+    - "Dans le fichier $MFTMirr uniquement"
+    - "Dans la zone $LogFile"
+  correct_answers:
+    - "Directement dans l'enregistrement de la MFT (Master File Table), dans l'attribut $DATA"
+  themes:
+    - "Windows"
+    - "Système"
+    - "Forensic"
+  difficulty: 3
+  image: null
+
+- id: 39
+  question: "Quel artefact du registre Windows est particulièrement utile pour identifier les clés USB et périphériques de stockage externes connectés par le passé à une machine ?"
+  options:
+    - "SYSTEM\\CurrentControlSet\\Enum\\USBSTOR (et USB) et la ruche SYSTEM pour les clés de classe USB"
+    - "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+    - "NTUSER.DAT\\Software\\Microsoft\\Office"
+    - "SAM\\Domains\\Account\\Users"
+  correct_answers:
+    - "SYSTEM\\CurrentControlSet\\Enum\\USBSTOR (et USB) et la ruche SYSTEM pour les clés de classe USB"
+  themes:
+    - "Windows"
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 40
+  question: "Comment un attaquant peut-il tenter d'altérer ou de masquer la chronologie des accès à un fichier sous Windows ?"
+  options:
+    - "En utilisant des techniques de timestomping, par exemple avec l'outil PowerShell (Set-ItemProperty) ou la commande copy /b pour modifier les horodatages MAC"
+    - "En désactivant le service Windows Event Log"
+    - "En compressant le fichier avec NTFS"
+    - "En chiffrant le fichier avec EFS"
+  correct_answers:
+    - "En utilisant des techniques de timestomping, par exemple avec l'outil PowerShell (Set-ItemProperty) ou la commande copy /b pour modifier les horodatages MAC"
+  themes:
+    - "Windows"
+    - "Système"
+    - "Forensic"
+  difficulty: 3
+  image: null
+
+- id: 41
+  question: "Qu'apporte une image disque (au format RAW/DD ou E01) par rapport à une simple copie de fichiers ?"
+  options:
+    - "Une copie bit à bit du support, incluant l'espace libre, les fichiers supprimés, les métadonnées complètes et permettant un calcul d'empreinte (hash) pour garantir l'intégrité"
+    - "Seulement les fichiers visibles sont copiés, mais plus rapidement"
+    - "Les fichiers sont compressés et chiffrés"
+    - "Les fichiers sont convertis en format universel (PDF/CSV)"
+  correct_answers:
+    - "Une copie bit à bit du support, incluant l'espace libre, les fichiers supprimés, les métadonnées complètes et permettant un calcul d'empreinte (hash) pour garantir l'intégrité"
+  themes:
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 42
+  question: "Quel type d'informations stocke le fichier Thumbs.db ?"
+  options:
+    - "Des miniatures (thumbnails) des images et vidéos présentes dans le dossier, générées automatiquement par l'explorateur Windows"
+    - "Les paramètres d'affichage du Bureau"
+    - "Les mots de passe du navigateur"
+    - "Les favoris Internet Explorer"
+  correct_answers:
+    - "Des miniatures (thumbnails) des images et vidéos présentes dans le dossier, générées automatiquement par l'explorateur Windows"
+  themes:
+    - "Windows"
+    - "Forensic"
+    - "Système"
+  difficulty: 1
+  image: null
+
+- id: 43
+  question: "Quel artefact du registre Windows (dans la ruche NTUSER.DAT) permet de lister les fichiers et dossiers récemment ouverts par un utilisateur spécifique ?"
+  options:
+    - "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs"
+    - "NTUSER.DAT\\Software\\Microsoft\\Office\\ClickToRun"
+    - "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+    - "NTUSER.DAT\\Environment"
+  correct_answers:
+    - "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs"
+  themes:
+    - "Windows"
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 44
+  question: "Quels éléments permet de trouver Prefetch sous Windows lors d'une analyse post-mortem ?"
+  options:
+    - "Des fichiers .pf dans C:\\Windows\\Prefetch, contenant le nom de l'exécutable, son horodatage d'exécution, le nombre d'exécutions et les DLL chargées"
+    - "Des logs dans C:\\Windows\\System32\\Logs"
+    - "Des fichiers .tmp dans le répertoire TEMP de l'utilisateur"
+    - "Des entrées dans la base de registre SAM"
+  correct_answers:
+    - "Des fichiers .pf dans C:\\Windows\\Prefetch, contenant le nom de l'exécutable, son horodatage d'exécution, le nombre d'exécutions et les DLL chargées"
+  themes:
+    - "Windows"
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 45
+  question: "Quelle est la différence entre les horodatages MAC (Modified, Accessed, Created) d'un fichier sous un système de fichiers FAT32 par rapport à NTFS ?"
+  options:
+    - "NTFS enregistre les horodatages avec une précision à la nanoseconde (100 ns) ; FAT32 se limite à une précision de 2 secondes pour la modification, 1 jour pour l'accès et 10 ms pour la création"
+    - "FAT32 stocke les horodatages en UTC ; NTFS en heure locale"
+    - "NTFS ne stocke pas la date de création (birth time) ; FAT32 si"
+    - "Il n'y a aucune différence entre les deux systèmes"
+  correct_answers:
+    - "NTFS enregistre les horodatages avec une précision à la nanoseconde (100 ns) ; FAT32 se limite à une précision de 2 secondes pour la modification, 1 jour pour l'accès et 10 ms pour la création"
+  themes:
+    - "Forensic"
+    - "Windows"
+    - "Système"
+  difficulty: 3
+  image: null
+
+- id: 46
+  question: "Que trouve-t-on dans le fichier Security.evtx des journaux d'événements Windows, et quel est son intérêt majeur en cas d'intrusion ?"
+  options:
+    - "Les événements de sécurité : connexions/déconnexions, ouvertures de session, échecs d'authentification, modifications de droits, utilisation de privilèges ; essentiel pour tracer les actions d'un attaquant"
+    - "Les pilotes installés sur la machine"
+    - "Les mises à jour Windows appliquées"
+    - "Les paramètres du pare-feu Windows"
+  correct_answers:
+    - "Les événements de sécurité : connexions/déconnexions, ouvertures de session, échecs d'authentification, modifications de droits, utilisation de privilèges ; essentiel pour tracer les actions d'un attaquant"
+  themes:
+    - "Windows"
+    - "Forensic"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 47
+  question: "Qu'est-ce qu'un \"fichier supprimé\" du point de vue d'un système de fichiers FAT ou NTFS ?"
+  options:
+    - "Sur FAT : le premier caractère du nom est remplacé par 0xE5 et les clusters sont marqués libres dans la FAT, mais les données restent sur disque jusqu'à réécriture. Sur NTFS : l'entrée MFT est marquée non utilisée, mais les données et métadonnées restent récupérables tant que non écrasées"
+    - "Les données sont immédiatement effacées (zeroed) du disque"
+    - "Le fichier est déplacé dans un dossier caché System Volume Information"
+    - "Le fichier est automatiquement chiffré par BitLocker"
+  correct_answers:
+    - "Sur FAT : le premier caractère du nom est remplacé par 0xE5 et les clusters sont marqués libres dans la FAT, mais les données restent sur disque jusqu'à réécriture. Sur NTFS : l'entrée MFT est marquée non utilisée, mais les données et métadonnées restent récupérables tant que non écrasées"
+  themes:
+    - "Forensic"
+    - "Windows"
+    - "Système"
+  difficulty: 3
+  image: null
+
+- id: 48
+  question: "Dans les flux standards d'un terminal Linux, à quoi correspondent les descripteurs de fichiers 0, 1 et 2 ?"
+  options:
+    - "0 : entrée standard (stdin), 1 : sortie standard (stdout), 2 : sortie d'erreur standard (stderr)"
+    - "0 : sortie standard (stdout), 1 : entrée standard (stdin), 2 : sortie d'erreur standard (stderr)"
+    - "0 : entrée standard (stdin), 1 : sortie d'erreur standard (stderr), 2 : sortie standard (stdout)"
+    - "0 : fichier de log, 1 : entrée standard (stdin), 2 : sortie standard (stdout)"
+  correct_answers:
+    - "0 : entrée standard (stdin), 1 : sortie standard (stdout), 2 : sortie d'erreur standard (stderr)"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 1
+  image: null
+
+- id: 49
+  question: "Quelle est la différence fondamentale entre les signaux SIGTERM (15) et SIGKILL (9) lorsqu'on souhaite arrêter un processus ?"
+  options:
+    - "SIGTERM peut être intercepté et ignoré par le processus (arrêt gracieux), alors que SIGKILL ne peut pas être intercepté et tue immédiatement le processus"
+    - "SIGTERM tue immédiatement le processus, alors que SIGKILL peut être intercepté"
+    - "Les deux signaux ont exactement le même comportement"
+    - "SIGTERM est utilisé pour les processus système uniquement, SIGKILL pour les processus utilisateur"
+  correct_answers:
+    - "SIGTERM peut être intercepté et ignoré par le processus (arrêt gracieux), alors que SIGKILL ne peut pas être intercepté et tue immédiatement le processus"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 50
+  question: "Comment fonctionne le mécanisme des liens symboliques (symlink) par rapport aux liens physiques (hard link) sous Linux ?"
+  options:
+    - "Un lien symbolique pointe vers le chemin du fichier cible (peut pointer vers des répertoires et traverser les systèmes de fichiers), alors qu'un lien physique pointe directement vers l'inode du fichier (même système de fichiers uniquement, pas de répertoires)"
+    - "Les liens symboliques et physiques sont identiques"
+    - "Un lien physique est plus rapide qu'un lien symbolique"
+    - "Les liens symboliques fonctionnent uniquement entre répertoires, les liens physiques uniquement entre fichiers"
+  correct_answers:
+    - "Un lien symbolique pointe vers le chemin du fichier cible (peut pointer vers des répertoires et traverser les systèmes de fichiers), alors qu'un lien physique pointe directement vers l'inode du fichier (même système de fichiers uniquement, pas de répertoires)"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 51
+  question: "Qu'est-ce qu'un fichier /etc/fstab et quel est son rôle critique lors du démarrage du système ?"
+  options:
+    - "C'est la table des systèmes de fichiers à monter automatiquement au démarrage, définissant les périphériques, points de montage, types de systèmes de fichiers et options de montage"
+    - "C'est un fichier de configuration réseau"
+    - "C'est un fichier de log système"
+    - "C'est un fichier contenant les variables d'environnement utilisateur"
+  correct_answers:
+    - "C'est la table des systèmes de fichiers à monter automatiquement au démarrage, définissant les périphériques, points de montage, types de systèmes de fichiers et options de montage"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 2
+  image: null
+
+- id: 52
+  question: "Qu'est-ce que le fichier /var/log/messages ?"
+  options:
+    - "Un fichier de log système central contenant les messages généraux du système, des services et du noyau (sur les systèmes non-systemd ou en complément de journalctl)"
+    - "Un fichier de configuration du noyau Linux"
+    - "Un fichier temporaire utilisé par le compilateur gcc"
+    - "Un fichier contenant les messages envoyés par les utilisateurs connectés"
+  correct_answers:
+    - "Un fichier de log système central contenant les messages généraux du système, des services et du noyau (sur les systèmes non-systemd ou en complément de journalctl)"
+  themes:
+    - "Linux"
+    - "Système"
+  difficulty: 1
+  image: null
+
+- id: 53
+  question: "Quel type d'enregistrement DNS (Resource Record) est spécifiquement utilisé pour associer un nom de domaine à une adresse IPv6 ?"
+  options:
+    - "AAAA (quad-A)"
+    - "A"
+    - "CNAME"
+    - "MX"
+  correct_answers:
+    - "AAAA (quad-A)"
+  themes:
+    - "Réseau"
+  difficulty: 1
+  image: null
+
+- id: 54
+  question: "Comment fonctionne le mécanisme de NAT/PAT (Network Address Translation / Port Address Translation) et quel problème d'épuisement d'adresses permet-il de mitiger au sein d'un réseau local ?"
+  options:
+    - "Il traduit les adresses IP privées en une ou plusieurs adresses IP publiques (avec translation de ports pour PAT), permettant à plusieurs machines d'accéder à Internet avec une seule adresse publique, mitigeant ainsi l'épuisement IPv4"
+    - "Il chiffre tout le trafic entre le réseau local et Internet"
+    - "Il bloque automatiquement les connexions entrantes suspectes"
+    - "Il attribue dynamiquement des adresses IP publiques à chaque machine du réseau local"
+  correct_answers:
+    - "Il traduit les adresses IP privées en une ou plusieurs adresses IP publiques (avec translation de ports pour PAT), permettant à plusieurs machines d'accéder à Internet avec une seule adresse publique, mitigeant ainsi l'épuisement IPv4"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: null
+
+- id: 55
+  question: "Quel est le rôle principal d'un proxy inverse (reverse proxy) par rapport à un proxy traditionnel (forward proxy) dans une architecture web ?"
+  options:
+    - "Un proxy inverse reçoit les requêtes clients pour les transmettre aux serveurs backend (load balancing, cache, sécurité), alors qu'un proxy forward agit pour le compte des clients pour accéder à des ressources externes"
+    - "Un proxy inverse est uniquement utilisé pour le caching, un proxy forward pour la sécurité"
+    - "Les deux types de proxy ont exactement le même rôle"
+    - "Un proxy inverse est utilisé uniquement en interne, un proxy forward uniquement en externe"
+  correct_answers:
+    - "Un proxy inverse reçoit les requêtes clients pour les transmettre aux serveurs backend (load balancing, cache, sécurité), alors qu'un proxy forward agit pour le compte des clients pour accéder à des ressources externes"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: null
+
+- id: 56
+  question: "Lors de l'établissement d'une connexion sécurisée en HTTPS, à quel moment chronologique exact intervient la négociation TLS (TLS Handshake) par rapport à la poignée de main TCP (TCP 3-way handshake) ?"
+  options:
+    - "Le TCP 3-way handshake a lieu d'abord, puis le TLS Handshake se déroule ensuite par-dessus la connexion TCP établie"
+    - "Le TLS Handshake a lieu avant le TCP 3-way handshake"
+    - "Les deux handshakes ont lieu simultanément"
+    - "Le TLS Handshake remplace complètement le TCP 3-way handshake"
+  correct_answers:
+    - "Le TCP 3-way handshake a lieu d'abord, puis le TLS Handshake se déroule ensuite par-dessus la connexion TCP établie"
+  themes:
+    - "Réseau"
+  difficulty: 2
+  image: null
+
+- id: 59
+  question: "Quels sont les mécanismes fondamentaux introduits par le protocole QUIC (utilisé par HTTP/3 au-dessus d'UDP) pour éliminer le problème du blocage en tête de ligne (head-of-line blocking) inhérent à TCP ?"
+  options:
+    - "QUIC implémente des flux (streams) indépendants avec contrôle de congestion séparé, permettant à un paquet perdu sur un flux de ne pas bloquer les autres flux"
+    - "QUIC supprime totalement le contrôle de congestion"
+    - "QUIC utilise uniquement TCP au lieu d'UDP"
+    - "QUIC ne résout pas le problème de head-of-line blocking"
+  correct_answers:
+    - "QUIC implémente des flux (streams) indépendants avec contrôle de congestion séparé, permettant à un paquet perdu sur un flux de ne pas bloquer les autres flux"
+  themes:
+    - "Réseau"
+  difficulty: 3
+  image: null
