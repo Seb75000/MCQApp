@@ -9,4 +9,3 @@ __pycache__/
 /question.json
 .DS_Store
 flask.log
-.env

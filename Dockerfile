@@ -15,9 +15,10 @@ COPY data/ data/
 
 RUN useradd -m -u 1000 appuser \
     && mkdir -p /app/data /app/reports \
+    && chmod o+w /app/reports \
     && chown -R appuser:appuser /app
 
-# L'utilisateur est géré par docker-compose.yml via user: "${UID}:${GID}"
+USER appuser
 
 VOLUME ["/app/data", "/app/reports"]
 
