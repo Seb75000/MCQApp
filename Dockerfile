@@ -17,7 +17,7 @@ RUN useradd -m -u 1000 appuser \
     && mkdir -p /app/data /app/reports \
     && chown -R appuser:appuser /app
 
-USER appuser
+# L'utilisateur est géré par docker-compose.yml via user: "${UID}:${GID}"
 
 VOLUME ["/app/data", "/app/reports"]
 
